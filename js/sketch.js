@@ -18,7 +18,7 @@ let time; //time
 let drawingContext;
 let canvas_text;
 
-let const_width = 130;
+let const_width = 132;
 
 let scale;
 

@@ -14,7 +14,7 @@ const heart = [
     [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
 ];
 
-let time;
+let time; //time
 let drawingContext;
 let canvas_text;
 

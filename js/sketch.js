@@ -32,7 +32,6 @@ function windowResized() {
     canvas_text.textAlign(CENTER);
     canvas_text.textSize(width<height ? width/15 : height/25);
     canvas_text.background(255, 0);
-    canvas_text.background(0)
     canvas_text.fill(0);
     canvas_text.noStroke();
     canvas_text.textWrap(CHAR);
@@ -50,7 +49,6 @@ function setup() {
     // Texto de feliz cumpleaños
     canvas_text = createGraphics(window.innerWidth+const_width, window.innerHeight);
     canvas_text.textFont('Source Code Pro');
-    canvas_text.background(0)
     canvas_text.textAlign(CENTER);
     canvas_text.textSize(width<height ? width/15 : height/25);
     canvas_text.background(255, 0);

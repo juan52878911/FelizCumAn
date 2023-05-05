@@ -28,10 +28,11 @@ function windowResized() {
     canvas_text = createGraphics(window.innerWidth, window.innerHeight);
     canvas_text.textFont('Source Code Pro');
     canvas_text.textAlign(CENTER);
-    canvas_text.textSize(32);
+    canvas_text.textSize(width<height ? width/15 : height/25);
     canvas_text.background(255, 0);
     canvas_text.fill(0);
     canvas_text.noStroke();
+    canvas_text.textWrap(CHAR);
     canvas_text.text("Eres la mejor persona \nque alguna vez pude conocer", width * 0.5, 50);
     canvas_text.text("Expandamos nuestro pequeño infinito\nmas alla de la realidad ", width * 0.5, height-50);
 
@@ -47,10 +48,11 @@ function setup() {
     canvas_text = createGraphics(window.innerWidth, window.innerHeight);
     canvas_text.textFont('Source Code Pro');
     canvas_text.textAlign(CENTER);
-    canvas_text.textSize(32);
+    canvas_text.textSize(width<height ? width/15 : height/25);
     canvas_text.background(255, 0);
     canvas_text.fill(0);
     canvas_text.noStroke();
+    canvas_text.textWrap(CHAR);
     canvas_text.text("Eres la mejor persona \nque alguna vez pude conocer", width * 0.5, 50);
     canvas_text.text("Expandamos nuestro pequeño infinito\nmas alla de la realidad ", width * 0.5, height-50);
 

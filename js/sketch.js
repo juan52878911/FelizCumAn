@@ -25,7 +25,7 @@ function windowResized() {
     time = 0;
 
     // Texto de feliz cumpleaños
-    canvas_text = createGraphics(window.innerWidth, window.innerHeight);
+    canvas_text = createGraphics(window.innerWidth+100, window.innerHeight);
     canvas_text.textFont('Source Code Pro');
     canvas_text.textAlign(CENTER);
     canvas_text.textSize(width<height ? width/15 : height/25);
@@ -33,8 +33,8 @@ function windowResized() {
     canvas_text.fill(0);
     canvas_text.noStroke();
     canvas_text.textWrap(CHAR);
-    canvas_text.text("Eres la mejor persona \nque alguna vez pude conocer", width * 0.5, 50);
-    canvas_text.text("Expandamos nuestro pequeño infinito\nmas alla de la realidad ", width * 0.5, height-50);
+    canvas_text.text("Eres la mejor persona \nque alguna vez pude conocer", (width+100) * 0.5, 50);
+    canvas_text.text("Expandamos nuestro pequeño infinito\nmas alla de la realidad ", (width+100) * 0.5, height-50);
 
     scale = (width<height ? width/20 : height/30);
 }
@@ -45,7 +45,7 @@ function setup() {
     time = 0;
 
     // Texto de feliz cumpleaños
-    canvas_text = createGraphics(window.innerWidth, window.innerHeight);
+    canvas_text = createGraphics(window.innerWidth+100, window.innerHeight);
     canvas_text.textFont('Source Code Pro');
     canvas_text.textAlign(CENTER);
     canvas_text.textSize(width<height ? width/15 : height/25);
@@ -53,8 +53,8 @@ function setup() {
     canvas_text.fill(0);
     canvas_text.noStroke();
     canvas_text.textWrap(CHAR);
-    canvas_text.text("Eres la mejor persona \nque alguna vez pude conocer", width * 0.5, 50);
-    canvas_text.text("Expandamos nuestro pequeño infinito\nmas alla de la realidad ", width * 0.5, height-50);
+    canvas_text.text("Eres la mejor persona \nque alguna vez pude conocer", (width+100) * 0.5, 50);
+    canvas_text.text("Expandamos nuestro pequeño infinito\nmas alla de la realidad ", (width+100) * 0.5, height-50);
 
     scale = (width<height ? width/20 : height/30);
 }

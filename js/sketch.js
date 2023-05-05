@@ -18,6 +18,8 @@ let time; //time
 let drawingContext;
 let canvas_text;
 
+let const_width = 130;
+
 let scale;
 
 function windowResized() {
@@ -25,16 +27,17 @@ function windowResized() {
     time = 0;
 
     // Texto de feliz cumpleaños
-    canvas_text = createGraphics(window.innerWidth+100, window.innerHeight);
+    canvas_text = createGraphics(window.innerWidth+const_width, window.innerHeight);
     canvas_text.textFont('Source Code Pro');
     canvas_text.textAlign(CENTER);
     canvas_text.textSize(width<height ? width/15 : height/25);
     canvas_text.background(255, 0);
+    canvas_text.background(0)
     canvas_text.fill(0);
     canvas_text.noStroke();
     canvas_text.textWrap(CHAR);
-    canvas_text.text("Eres la mejor persona \nque alguna vez pude conocer", (width+100) * 0.5, 50);
-    canvas_text.text("Expandamos nuestro pequeño infinito\nmas alla de la realidad ", (width+100) * 0.5, height-50);
+    canvas_text.text("Eres la mejor persona \nque alguna vez pude conocer", (width+const_width) * 0.5, 50);
+    canvas_text.text("Expandamos nuestro pequeño infinito\nmas alla de la realidad ", (width+const_width) * 0.5, height-50);
 
     scale = (width<height ? width/20 : height/30);
 }
@@ -45,16 +48,17 @@ function setup() {
     time = 0;
 
     // Texto de feliz cumpleaños
-    canvas_text = createGraphics(window.innerWidth+100, window.innerHeight);
+    canvas_text = createGraphics(window.innerWidth+const_width, window.innerHeight);
     canvas_text.textFont('Source Code Pro');
+    canvas_text.background(0)
     canvas_text.textAlign(CENTER);
     canvas_text.textSize(width<height ? width/15 : height/25);
     canvas_text.background(255, 0);
     canvas_text.fill(0);
     canvas_text.noStroke();
     canvas_text.textWrap(CHAR);
-    canvas_text.text("Eres la mejor persona \nque alguna vez pude conocer", (width+100) * 0.5, 50);
-    canvas_text.text("Expandamos nuestro pequeño infinito\nmas alla de la realidad ", (width+100) * 0.5, height-50);
+    canvas_text.text("Eres la mejor persona \nque alguna vez pude conocer", (width+const_width) * 0.5, 50);
+    canvas_text.text("Expandamos nuestro pequeño infinito\nmas alla de la realidad ", (width+const_width) * 0.5, height-50);
 
     scale = (width<height ? width/20 : height/30);
 }
@@ -65,7 +69,7 @@ function draw() {
 
     translate(0,0,-200)
     texture(canvas_text);
-    plane(window.innerWidth - 4, window.innerHeight - 4);
+    plane(window.innerWidth + const_width , window.innerHeight);
 
     translate(0,0,200)
     directionalLight(255, 255, 255, 1, 100, 100, -100)
